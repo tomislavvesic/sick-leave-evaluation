@@ -1,5 +1,8 @@
 .sick-leave-rejected {
     text-align: center;
     border: 2px inset gray;
-    height: 60%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(110, 110, 110, 1);
+    border-radius: 20px;
 }

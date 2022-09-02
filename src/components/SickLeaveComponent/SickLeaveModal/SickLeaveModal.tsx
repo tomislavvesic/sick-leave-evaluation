@@ -41,7 +41,7 @@ const SickLeaveModal = ({ setIsOpen }: any) => {
             <div className='position'>
                 <div className="row h-100">
                     <div className="col-4 pe-0 h-100">
-                        <div className="sick-leave-modal w-100 h-100">
+                        <div className="sick-leave-modal-item-list w-100 h-100">
                             <div className='row row-height'>
                                 <div className='col-12 h-100'>
                                     {results}
@@ -49,14 +49,14 @@ const SickLeaveModal = ({ setIsOpen }: any) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-8 ps-0 h-100">
+                    <div className="col-8 ps-0 h-100 sick-leave-modal-body">
                         {selectedSickLeaveId ? (
                             <div className="h-100">
                                 <SelectedSickLeave sickLeaveObject={sickLeaveObjectProp} />
                             </div>
                         ) : (
-                            <div className="h-100">
-                                <p className="no-sick-info h-100">No Sick Leave Info selected</p>
+                            <div className="align-items-center d-flex h-100">
+                                <p className="align-items-center d-flex h-100 sick-leave-modal-no-info">No Sick Leave Info selected</p>
                             </div>
                         )}
                     </div>

@@ -5,7 +5,7 @@
     right: 0;
     width: 70%;
     height: 75vh;
-    background-color: gray;
+    background: rgba(110, 110, 110, 1);
     margin: auto;
     border-radius: 20px;
 }
@@ -21,20 +21,23 @@
     position: absolute;
 }
 
-.no-sick-info {
-    border-left: 1px solid black;
-}
-
-
 .popup {
     opacity: 0;
     animation: popup .6s 0.1s ease forwards;
 }
 
-.sick-leave-modal {
+.sick-leave-modal-item-list {
     text-align: center;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+.sick-leave-modal-body {
+    border-left: 1px solid black;
+}
+
+.sick-leave-modal-no-info {
+    margin: auto;
 }
 
 @keyframes popup {

@@ -3,6 +3,8 @@
     border: 2px inset gray;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: rgba(110, 110, 110, 1);
+    border-radius: 20px;
 }
 
 .row-height {
