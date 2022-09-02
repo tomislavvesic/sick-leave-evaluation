@@ -1,0 +1,10 @@
+.sick-leave-approved {
+    text-align: center;
+    border: 2px inset gray;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.row-height {
+    height: 10%;
+}

@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "patientInfo": {
+            "firstName": "Cora",
+            "lastName": "Simmonds",
+            "dateOfBirth": "10/12/1974",
+            "sexAtBirth": "Female"
+        },
+        "submittedDateTime": "03/08/2022 18:15",
+        "startDate": "02/08/2022",
+        "endDate": "03/08/2022",
+        "reason": "Sprained ankle",
+        "status": "approved"
+    },
+    {
+        "id": 2,
+        "patientInfo": {
+            "firstName": "Rebecca",
+            "lastName": "Charlton",
+            "dateOfBirth": "10/05/1977",
+            "sexAtBirth": "Female"
+        },
+        "submittedDateTime": "03/08/2022 19:29",
+        "startDate": "03/08/2022",
+        "endDate": "03/08/2022",
+        "reason": "Car accident",
+        "status": "rejected",
+        "description": "Cos Rebecca Bad"
+    },
+    {
+        "id": 3,
+        "patientInfo": {
+            "firstName": "Oliver",
+            "lastName": "Thornton",
+            "dateOfBirth": "20/11/1995",
+            "sexAtBirth": "Male"
+        },
+        "submittedDateTime": "05/08/2022 20:01",
+        "startDate": "08/08/2022",
+        "endDate": "12/08/2022",
+        "reason": "Hospitalisation"
+    },
+    {
+        "id": 4,
+        "patientInfo": {
+            "firstName": "Peter",
+            "lastName": "Simmonds",
+            "dateOfBirth": "01/12/1999",
+            "sexAtBirth": "Male"
+        },
+        "submittedDateTime": "06/08/2022 14:32",
+        "startDate": "01/08/2022",
+        "endDate": "05/08/2022",
+        "reason": "Flu"
+    },
+    {
+        "id": 5,
+        "patientInfo": {
+            "firstName": "Ivy",
+            "lastName": "Williams",
+            "dateOfBirth": "01/02/1960",
+            "sexAtBirth": "Female"
+        },
+        "submittedDateTime": "08/08/2022 10:52",
+        "startDate": "09/08/2022",
+        "endDate": "09/08/2022",
+        "reason": "Medical appointment"
+    },
+    {
+        "id": 6,
+        "patientInfo": {
+            "firstName": "Jasminder",
+            "lastName": "Singh",
+            "dateOfBirth": "01/01/1965",
+            "sexAtBirth": "Female"
+        },
+        "submittedDateTime": "08/08/2022 12:10",
+        "startDate": "03/08/2022",
+        "endDate": "05/08/2022",
+        "reason": "Food poisoning"
+    },
+    {
+        "id": 7,
+        "patientInfo": {
+            "firstName": "Joseph",
+            "lastName": "Murray",
+            "dateOfBirth": "02/04/1970",
+            "sexAtBirth": "Male"
+        },
+        "submittedDateTime": "08/08/2022 17:08",
+        "startDate": "08/08/2022",
+        "endDate": "08/08/2022",
+        "reason": "Severe back pain"
+    },
+    {
+        "id": 8,
+        "patientInfo": {
+            "firstName": "Nora",
+            "lastName": "Watts",
+            "dateOfBirth": "20/01/2000",
+            "sexAtBirth": "Female"
+        },
+        "submittedDateTime": "10/08/2022 12:51",
+        "startDate": "11/08/2022",
+        "endDate": "12/08/2022",
+        "reason": "Surgery"
+    },
+    {
+        "id": 9,
+        "patientInfo": {
+            "firstName": "Diana",
+            "lastName": "Walsh",
+            "dateOfBirth": "30/12/1980",
+            "sexAtBirth": "Female"
+        },
+        "submittedDateTime": "10/08/2022 16:21",
+        "startDate": "09/08/2022",
+        "endDate": "09/08/2022",
+        "reason": "Severe migraine"
+    },
+    {
+        "id": 10,
+        "patientInfo": {
+            "firstName": "Adam",
+            "lastName": "Ward",
+            "dateOfBirth": "05/06/1982",
+            "sexAtBirth": "Male"
+        },
+        "submittedDateTime": "11/08/2022 09:08",
+        "startDate": "11/08/2022",
+        "endDate": "11/08/2022",
+        "reason": "Fever"
+    },
+    {
+        "id": 11,
+        "patientInfo": {
+            "firstName": "Oliver",
+            "lastName": "Smith",
+            "dateOfBirth": "12/02/1980",
+            "sexAtBirth": "Male"
+        },
+        "submittedDateTime": "11/08/2022 10:04",
+        "startDate": "11/08/2022",
+        "endDate": "11/08/2022",
+        "reason": "Allergic reaction"
+    }
+]

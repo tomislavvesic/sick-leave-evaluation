@@ -1,0 +1,48 @@
+.position {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 75vh;
+    background-color: gray;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.darkBG {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.no-sick-info {
+    border-left: 1px solid black;
+}
+
+
+.popup {
+    opacity: 0;
+    animation: popup .6s 0.1s ease forwards;
+}
+
+.sick-leave-modal {
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
