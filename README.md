@@ -1,6 +1,7 @@
 # Create app
 
 Run: 
+* git clone https://github.com/tomislavvesic/sick-leave-evaluation.git
 * cd _project_
 * npm install
 * npm start
