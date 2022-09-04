@@ -2,7 +2,7 @@
 
 Run: 
 * git clone https://github.com/tomislavvesic/sick-leave-evaluation.git
-* cd _project_
+* cd sick-leave-evaluation
 * npm install
 * npm start
 
