@@ -1,7 +1,7 @@
 # Create app
 
 Run: 
-* cd <project>
+* cd _project_
 * npm install
 * npm start
 
