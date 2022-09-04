@@ -1,8 +1,17 @@
 .sick-leave-container {
     text-align: center;
     background-color: #363636;
+    height: 100%;
+
+
 }
 
 .sick-leave-columns {
     height: 90%;
+}
+
+@media only screen and (min-width: 576px) {
+    .sick-leave-container {
+        height: 100vh;
+    }
 }

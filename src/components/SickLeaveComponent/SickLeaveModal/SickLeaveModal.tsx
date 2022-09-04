@@ -4,30 +4,32 @@ import { useSelector } from 'react-redux';
 import './SickLeaveModal.css';
 import SelectedSickLeave from './SelectedSickLeave/SelectedSickLeave'
 import SickLeaveColumn from '../shared/SickLeaveColumn/SickLeaveColumn';
+import { SickLeaveObjectModel } from "../../../models/SickLeaveObjectModel";
+import { SickLeaveStateModel } from "../../../models/SickLeaveStateModel";
 
 const SickLeaveModal = ({ setIsOpen }: any) => {
-    const [selectedSickLeaveId, setSelectedSickLeaveInfo] = useState(null);
-    const sick_leave_state = useSelector((state: any) => state.sickLeaveState)
+    const [selectedSickLeaveId, setSelectedSickLeaveInfo] = useState<number | null>(null);
+    const sickLeaveState = useSelector((state: SickLeaveStateModel) => state.sickLeaveState)
 
+    let sickLeaveObjectProp!: SickLeaveObjectModel
     const results: any[] = [];
-    let sickLeaveObjectProp: any = null
 
-    sick_leave_state.map((sickLeaveObject: any) => {
+    sickLeaveState.map((sickLeaveObject: SickLeaveObjectModel) => {
         return (
             results.push(
                 <div key={sickLeaveObject.id} onClick={() => getClickedSickLeaveInfo(sickLeaveObject.id)}>
-                    {!sick_leave_state.status && <SickLeaveColumn sickLeaveObject={sickLeaveObject} />}
+                    {!sickLeaveObject.status && <SickLeaveColumn sickLeaveObject={sickLeaveObject} />}
                 </div>
             )
         )
     });
 
-    const getClickedSickLeaveInfo = (key: any) => {
+    const getClickedSickLeaveInfo = (key: number) => {
         setSelectedSickLeaveInfo(key)
     };
 
     const getSelectedSickLeaveObject = () => {
-        sick_leave_state.map((sickLeaveObject: any) => {
+        sickLeaveState.map((sickLeaveObject: SickLeaveObjectModel) => {
             if (sickLeaveObject.id === selectedSickLeaveId) {
                 sickLeaveObjectProp = sickLeaveObject
             }

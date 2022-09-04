@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate replace to="/sickleave" />} />
         <Route path='/sickleave' element={<SickLeaveColumns />} />
+        {/* !TODO add error page in case of wrong URL */}
         {/* <Route path='*' element={<ErrorPage />} /> */}
       </Routes>
     </Router>

@@ -1,29 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import './SickLeavePending.css';
 import SickLeaveColumn from '../../shared/SickLeaveColumn/SickLeaveColumn';
+import SickLeaveInfo from '../../shared/SickLeaveInfo/SickLeaveInfo';
+import { SickLeaveObjectModel } from '../../../../models/SickLeaveObjectModel';
+import { SickLeaveStateModel } from '../../../../models/SickLeaveStateModel';
 
 function SickLeavePending() {
-    const sick_leave_state = useSelector((state: any) => state?.sickLeaveState)
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedSickLeaveId, setSelectedSickLeaveInfo] = useState<number | null>(null);
+    const sickLeaveState = useSelector((state: SickLeaveStateModel) => state?.sickLeaveState)
+
+    let sickLeaveObjectProp: SickLeaveObjectModel | null = null
     const results: any[] = [];
 
-    sick_leave_state.forEach((sickLeaveObject: any, index: React.Key) => {
+    sickLeaveState.forEach((sickLeaveObject: SickLeaveObjectModel, index: React.Key) => {
         if (!sickLeaveObject.status) {
             results.push(
-                <div key={index}>
-                    {!sick_leave_state.status && <SickLeaveColumn sickLeaveObject={sickLeaveObject} />}
+                <div key={index} onClick={() => getClickedSickLeaveInfo(sickLeaveObject.id)}>
+                    {<SickLeaveColumn sickLeaveObject={sickLeaveObject} />}
                 </div>
             )
         };
     });
 
-    console.log("RERENDER RERENDER")
+    const getClickedSickLeaveInfo = (key: number) => {
+        setIsOpen(true)
+        setSelectedSickLeaveInfo(key)
+
+    };
+
+    const getSelectedSickLeaveObject = () => {
+        sickLeaveState.map((sickLeaveObject: SickLeaveObjectModel) => {
+            if (sickLeaveObject.id === selectedSickLeaveId) {
+                sickLeaveObjectProp = sickLeaveObject
+            }
+        })
+    }
+
+    getSelectedSickLeaveObject()
     return (
         <div className="sick-leave-pending w-100 h-100">
             <div className='row'>
                 <div className='col-12 h-100'>
-                    {results}
+                    {sickLeaveObjectProp && isOpen ? (
+                        <div className="h-100">
+                            {<SickLeaveInfo sickLeaveObject={sickLeaveObjectProp} setIsOpen={setIsOpen} />}
+                        </div>
+                    ) : (
+                        <>
+                            {results}
+                        </>
+                    )}
                 </div>
             </div>
         </div>

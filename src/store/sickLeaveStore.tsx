@@ -3,20 +3,15 @@ import { createStore } from 'redux'
 
 import sickLeaveJsonData from '../sickLeaveRequests.json';
 import { SickLeaveStateModel } from '../models/SickLeaveStateModel';
+import { SickLeaveObjectModel } from '../models/SickLeaveActionModel';
 
 const sickLeaveInfo = {
     sickLeaveState: sickLeaveJsonData
 }
 
-const sickLeaveReducer: Reducer<any, any> = (state: SickLeaveStateModel = sickLeaveInfo, action: { type: string, id: number, description?: string, status?: string }) => {
+const sickLeaveReducer: Reducer<any, any> = (state: SickLeaveStateModel = sickLeaveInfo, action: SickLeaveObjectModel) => {
     switch (action.type) {
         case "updateSickLeave":
-            console.log(action.description)
-            console.log(action.status)
-            console.log(action.id)
-            console.log(...state.sickLeaveState)
-            console.log(sickLeaveInfo)
-            console.log(sickLeaveInfo.sickLeaveState)
             return {
                 ...state,
                 sickLeaveState: state.sickLeaveState.map((sickLeaveObject, i) =>

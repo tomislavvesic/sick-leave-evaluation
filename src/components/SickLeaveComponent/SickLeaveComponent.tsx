@@ -9,14 +9,14 @@ import SickLeaveModal from "./SickLeaveModal/SickLeaveModal";
 
 function SickLeaveColumns() {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
-        <div className="sick-leave-container vh-100">
+        <div className="sick-leave-container">
             <div className="container-fluid pt-5 pb-5 h-100">
                 {/* !TODO Should this button logic be seperated into new file? */}
                 {isOpen && <SickLeaveModal setIsOpen={setIsOpen} />}
-                <div className='row mb-5'>
+                <div className='row'>
                     <div className="col-md-12 text-center">
                         <button className='btn btn-success w-50' onClick={() => setIsOpen(true)}>
                             Evaluate Sick Leave
@@ -24,13 +24,13 @@ function SickLeaveColumns() {
                     </div>
                 </div>
                 <div className='sick-leave-columns row'>
-                    <div className='col-4 h-100'>
+                    <div className='col-12 col-sm-4 h-100 mt-5'>
                         <SickLeavePending />
                     </div>
-                    <div className='col-4 h-100'>
+                    <div className='col-12 col-sm-4 h-100 mt-5'>
                         <SickLeaveApproved />
                     </div>
-                    <div className='col-4 h-100'>
+                    <div className='col-12 col-sm-4 h-100 mt-5'>
                         <SickLeaveRejected />
                     </div>
                 </div>

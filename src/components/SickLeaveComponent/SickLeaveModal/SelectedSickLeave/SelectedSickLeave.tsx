@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { SickLeaveObjectModel } from '../../../../models/SickLeaveObjectModel';
 import './SelectedSickLeave.css';
 
-function SelectedSickLeave(_props: any) {
+function SelectedSickLeave(_props: { sickLeaveObject: SickLeaveObjectModel; }) {
     const sickLeaveObject = _props.sickLeaveObject
 
     const [sickLeaveDescription, setSickLeaveDescription] = useState('');
