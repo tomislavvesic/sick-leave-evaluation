@@ -18,6 +18,7 @@ function SickLeavePending() {
         };
     });
 
+    console.log("RERENDER RERENDER")
     return (
         <div className="sick-leave-pending w-100 h-100">
             <div className='row'>

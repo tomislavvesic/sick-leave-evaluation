@@ -5,6 +5,7 @@ import SickLeaveColumn from '../../shared/SickLeaveColumn/SickLeaveColumn';
 
 function SickLeaveApproved() {
     const sick_leave_state = useSelector((state: any) => state?.sickLeaveState)
+    console.log(sick_leave_state)
     const results: any[] = [];
 
     sick_leave_state.forEach((sickLeaveObject: any, index: React.Key) => {

@@ -27,7 +27,7 @@ const SickLeaveModal = ({ setIsOpen }: any) => {
     };
 
     const getSelectedSickLeaveObject = () => {
-        sick_leave_state.forEach((sickLeaveObject: any) => {
+        sick_leave_state.map((sickLeaveObject: any) => {
             if (sickLeaveObject.id === selectedSickLeaveId) {
                 sickLeaveObjectProp = sickLeaveObject
             }
